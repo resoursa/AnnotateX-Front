@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Designlab-inspired Styles */
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .designlab-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300 overflow-hidden;
+  }
+  
+  .designlab-card:hover {
+    @apply shadow-lg transform -translate-y-1;
+  }
+  
+  .designlab-button {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .designlab-button-secondary {
+    @apply bg-white text-gray-700 px-6 py-3 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .designlab-input {
+    @apply bg-white border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition-all duration-200;
+  }
+  
+  .designlab-header {
+    @apply bg-white border-b border-gray-200 shadow-sm;
+  }
+  
+  .designlab-footer {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .designlab-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800;
+  }
+}
